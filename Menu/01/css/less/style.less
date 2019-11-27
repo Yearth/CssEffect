@@ -1,0 +1,70 @@
+@import 'mixins.less';
+@import 'var.less';
+* {
+	.init;
+}
+
+#page {
+	min-width: 100vw;
+	min-height: 100vh;
+	background: @page-bg;
+	.flex-center;
+}
+
+.menu {
+	width: @menu-width;
+	border-radius: @menu-border-radius;
+	overflow: hidden;
+
+	.menu-item {
+		list-style: none;
+		border-top: @menu-item-border-top;
+		overflow: hidden;
+
+		.menu-item-btn {
+			position: relative;
+			display: block;
+			padding: @menu-item-btn-padding;
+			background: @theme-bg;
+			color: @theme-text-color;
+			text-decoration: none;
+
+			&::before {
+				.menu-item-btn-modified;
+			}
+
+			.fa {
+				margin-right: @fa-margin-right;
+			}
+		}
+
+		.sub-menu {
+			background: @sub-menu-bg;
+			overflow: hidden;
+			transition: max-height 0.5s;
+			max-height: 0;
+
+			.sub-menu-btn {
+				position: relative;
+				display: block;
+				margin: @sub-menu-btn-margin;
+				padding: @sub-menu-btn-padding;
+				color: @theme-text-color;
+				text-decoration: none;
+				font-size: @sub-menu-btn-font-size;
+
+				&::before {
+					.sub-menu-btn-modified;
+				}
+
+				&:hover::before {
+					opacity: 1;
+				}
+			}
+		}
+
+		&:target .sub-menu {
+			max-height: 10em;
+		}
+	}
+}

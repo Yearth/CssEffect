@@ -1,0 +1,113 @@
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Poppins Regular'), local('Poppins-Regular'), url(https://fonts.gstatic.com/s/poppins/v8/pxiEyp8kv8JHgFVrJJfedw.ttf) format('truetype');
+}
+.init {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu-item-btn-modified {
+  content: '';
+  position: absolute;
+  left: 20px;
+  bottom: -7px;
+  width: 14px;
+  height: 14px;
+  background: #3498db;
+  transform: rotate(45deg);
+}
+.sub-menu-btn-modified {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  background: #3498db;
+  opacity: 0;
+  transition: 0.5s;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+#page {
+  min-width: 100vw;
+  min-height: 100vh;
+  background: #262626;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu {
+  width: 300px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.menu .menu-item {
+  list-style: none;
+  border-top: 1px solid #2980b9;
+  overflow: hidden;
+}
+.menu .menu-item .menu-item-btn {
+  position: relative;
+  display: block;
+  padding: 16px 20px;
+  background: #3498db;
+  color: #fff;
+  text-decoration: none;
+}
+.menu .menu-item .menu-item-btn::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  bottom: -7px;
+  width: 14px;
+  height: 14px;
+  background: #3498db;
+  transform: rotate(45deg);
+}
+.menu .menu-item .menu-item-btn .fa {
+  margin-right: 10px;
+}
+.menu .menu-item .sub-menu {
+  background: #333;
+  overflow: hidden;
+  transition: max-height 0.5s;
+  max-height: 0;
+}
+.menu .menu-item .sub-menu .sub-menu-btn {
+  position: relative;
+  display: block;
+  margin: 4px 0;
+  padding: 16px 26px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+.menu .menu-item .sub-menu .sub-menu-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  background: #3498db;
+  opacity: 0;
+  transition: 0.5s;
+}
+.menu .menu-item .sub-menu .sub-menu-btn:hover::before {
+  opacity: 1;
+}
+.menu .menu-item:target .sub-menu {
+  max-height: 10em;
+}
