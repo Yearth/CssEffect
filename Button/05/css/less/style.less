@@ -1,0 +1,33 @@
+@import 'mixins.less';
+@import 'var.less';
+* {
+	.init;
+	box-sizing: border-box;
+}
+
+#page {
+	min-width: 100vw;
+	min-height: 100vh;
+	.flex-center;
+	background: #262626;
+
+	a {
+		position: relative;
+		display: inline-block;
+		margin: 20px;
+		padding: 10px 30px;
+		text-decoration: none;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		font-size: 12;
+		color: #fff;
+		background: linear-gradient(to right, #9d50bb, #6e48aa, #9d50bb);
+		background-size: 200%;
+		transition: 0.5s;
+
+		&:hover {
+			background-position-x: 100%;
+			transform: translateY(-15px);
+		}
+	}
+}

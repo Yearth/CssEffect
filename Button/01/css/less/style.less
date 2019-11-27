@@ -1,0 +1,46 @@
+@import 'mixins.less';
+@import 'var.less';
+* {
+	.init;
+}
+
+#page {
+	min-width: 100vw;
+	min-height: 100vh;
+	background: @page-background;
+	.flex-center;
+
+	button {
+		padding: @button-padding;
+		background: none;
+		border: 1px solid @themt-color;
+		color: @themt-color;
+		font-size: @button-font-size;
+		cursor: pointer;
+		position: relative;
+		overflow: hidden;
+		transition: 0.5s;
+		z-index: 1;
+
+		&:hover {
+			color: @button-active-text-color;
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 0;
+			border-radius: 0 0 50% 50%;
+			background: @themt-color;
+			z-index: -1;
+			transition: 0.5s;
+		}
+
+		&:hover::before {
+			height: 180%;
+		}
+	}
+}

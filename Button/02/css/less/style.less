@@ -1,0 +1,113 @@
+@import 'mixins.less';
+@import 'var.less';
+* {
+	.init;
+}
+
+#page {
+	min-width: 100vw;
+	min-height: 100vh;
+	background: @page-bg;
+	.flex-center;
+
+	a {
+		position: relative;
+		padding: 15px 30px;
+		box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+		font-size: @a-text-font-size;
+		color: @a-text-color;
+		text-transform: uppercase;
+		letter-spacing: 3px;
+		text-decoration: none;
+		overflow: hidden;
+
+		span {
+			position: absolute;
+			display: block;
+			background: @span-color;
+
+			// 左边光条，开始出现
+			&:nth-child(1) {
+				top: 0;
+				left: 0;
+				width: 5px;
+				height: 100%;
+				transform: translateY(0);
+			}
+
+			// 右边光条，开始出现
+			&:nth-child(4) {
+				top: 0;
+				right: 0;
+				width: 5px;
+				height: 100%;
+				transform: translateY(0);
+			}
+
+			// 上方光条，hover 时出现
+			&:nth-child(2) {
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 5px;
+				transform: translateX(-100%);
+			}
+
+			// 下方光条，hover 时出现
+			&:nth-child(5) {
+				right: 0;
+				bottom: 0;
+				width: 100%;
+				height: 5px;
+				transform: translateX(100%);
+			}
+
+			// 右侧光条，hover 时出现
+			&:nth-child(3) {
+				top: 0;
+				right: 0;
+				width: 5px;
+				height: 100%;
+				transform: translateY(-100%);
+			}
+
+			// 左侧光条，hover 时出现
+			&:nth-child(6) {
+				bottom: 0;
+				left: 0;
+				width: 5px;
+				height: 100%;
+				transform: translateY(100%);
+			}
+		}
+
+		&:hover span:nth-child(1) {
+			transform: translateY(-100%);
+			transition: 0.5s;
+		}
+		&:hover span:nth-child(4) {
+			transform: translateY(100%);
+			transition: 0.5s;
+		}
+		&:hover span:nth-child(2) {
+			transform: translateX(100%);
+			transition: 0.75s;
+			transition-delay: 0.25s;
+		}
+		&:hover span:nth-child(5) {
+			transform: translateX(-100%);
+			transition: 0.75s;
+			transition-delay: 0.25s;
+		}
+		&:hover span:nth-child(3) {
+			transform: translateY(0);
+			transition: 0.5s;
+			transition-delay: 0.5s;
+		}
+		&:hover span:nth-child(6) {
+			transform: translateY(0);
+			transition: 0.5s;
+			transition-delay: 0.5s;
+		}
+	}
+}

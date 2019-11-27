@@ -1,0 +1,88 @@
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Poppins Regular'), local('Poppins-Regular'), url(https://fonts.gstatic.com/s/poppins/v9/pxiEyp8kv8JHgFVrJJfedw.ttf) format('truetype');
+}
+.init {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+#page {
+  min-width: 100vw;
+  min-height: 100vh;
+  background: #262626;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#page .btn-filed {
+  position: relative;
+  display: block;
+  padding: 20px 50px;
+  width: 200px;
+  text-decoration: none;
+  overflow: hidden;
+}
+#page .btn-filed span {
+  position: relative;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 8px;
+  color: #f0f0f0;
+  text-transform: uppercase;
+  z-index: 1;
+}
+#page .btn-filed .liquid {
+  position: absolute;
+  top: -70px;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  background: #4973ff;
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
+}
+#page .btn-filed .liquid::before,
+#page .btn-filed .liquid::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  transform: translate(-50%, -75%);
+}
+#page .btn-filed .liquid::before {
+  border-radius: 45%;
+  background: #262626;
+  animation: liquid 5s linear infinite;
+}
+#page .btn-filed .liquid::after {
+  border-radius: 40%;
+  background: rgba(20, 20, 20, 0.5);
+  animation: liquid 10s linear infinite;
+}
+#page .btn-filed:hover .liquid {
+  top: -120px;
+}
+@keyframes liquid {
+  0% {
+    transform: translate(-50%, -75%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -75%) rotate(360deg);
+  }
+}

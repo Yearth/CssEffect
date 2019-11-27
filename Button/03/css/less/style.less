@@ -1,0 +1,53 @@
+@import 'mixins.less';
+@import 'var.less';
+* {
+	.init;
+}
+
+#page {
+	min-width: 100vw;
+	min-height: 100vh;
+	background: #262626;
+	.flex-center;
+
+	.btn-field {
+		a {
+			width: 60px;
+			height: 60px;
+			.flex-center;
+			text-decoration: none;
+			color: #fff;
+			font-size: 18px;
+			z-index: 2;
+			position: relative;
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 60px;
+				height: 60px;
+				background: linear-gradient(45deg, #43cea2, #185a9d);
+				border-radius: 50%;
+				z-index: -1;
+				transition: 0.3s ease-in;
+			}
+
+			&:hover::before {
+				transform: scale(0);
+			}
+
+			i {
+				transition: 0.3s ease-in;
+			}
+
+			&:hover i {
+				background: linear-gradient(45deg, #43cea2, #185a9d);
+				// -webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				transform: scale(2);
+			}
+		}
+	}
+}

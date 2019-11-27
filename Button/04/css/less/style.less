@@ -1,0 +1,79 @@
+@import 'mixins.less';
+@import 'var.less';
+* {
+	.init;
+	box-sizing: border-box;
+}
+
+#page {
+	min-width: 100vw;
+	min-height: 100vh;
+	background: @page-bg;
+	.flex-center;
+
+	.btn-filed {
+		position: relative;
+		display: block;
+		padding: 20px 50px;
+		width: @button-width;
+		text-decoration: none;
+		overflow: hidden;
+
+		span {
+			position: relative;
+			font-size: @button-font-size;
+			font-weight: 500;
+			letter-spacing: @button-latter-space;
+			color: @button-text-color;
+			text-transform: uppercase;
+			z-index: 1;
+		}
+
+		.liquid {
+			position: absolute;
+			top: -70px;
+			left: 0;
+			width: 200px;
+			height: 200px;
+			background: @liquid-bg;
+			box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+			transition: 0.5s;
+
+			&::before,
+			&::after {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 50%;
+				width: 200%;
+				height: 200%;
+				transform: translate(-50%, -75%);
+			}
+
+			&::before {
+				border-radius: 45%;
+				background: @page-bg;
+				animation: liquid 5s linear infinite;
+			}
+
+			&::after {
+				border-radius: 40%;
+				background: rgba(20, 20, 20, 0.5);
+				animation: liquid 10s linear infinite;
+			}
+		}
+
+		&:hover .liquid {
+			top: -120px;
+		}
+	}
+}
+
+@keyframes liquid {
+	0% {
+		transform: translate(-50%, -75%) rotate(0deg);
+	}
+	100% {
+		transform: translate(-50%, -75%) rotate(360deg);
+	}
+}

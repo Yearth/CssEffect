@@ -1,0 +1,49 @@
+<!--
+ * @Author: Yearth
+ * @Github: https://github.com/Yearth
+ * @Date: 2019-11-25 10:45:56
+ * @Description: Button Effect 09
+ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./css/dist/style.css" />
+
+    <title>Button Effect 09</title>
+  </head>
+  <body>
+    <button class="login-btn">
+      <p>Login</p>
+      <div class="loading">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
+      <svg
+        class="complete"
+        width="30px"
+        height="30px"
+        stroke="#f1f1f1"
+        fill="none"
+      >
+        <polyline points="2,10 12,18 28,2"></polyline>
+      </svg>
+    </button>
+
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script>
+      $(() => {
+        $(".login-btn").click(function() {
+          $(this).toggleClass("active");
+          setTimeout(() => {
+            $(this).toggleClass("verity");
+          }, 2000);
+        });
+      });
+    </script>
+  </body>
+</html>
