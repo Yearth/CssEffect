@@ -1,0 +1,133 @@
+/**
+ * 配色方案：
+ * 背景：rgb(224, 207, 254), rbg(255, 239, 255)
+ * 按钮：rgb(181, 154, 254), rgb(254, 189, 253)
+ */
+
+$theme-color: rgb(181, 154, 254);
+
+@mixin init {
+	margin: 0;
+	padding: 0;
+}
+
+@mixin flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+* {
+	@include init();
+}
+
+#page {
+	width: 100vw;
+	height: 100vh;
+	@include flex-center();
+	background: linear-gradient(45deg, rgb(181, 154, 254), rgb(254, 189, 253));
+
+	.container {
+		width: 70rem;
+		position: relative;
+
+		.img-box {
+			img {
+				width: 70rem;
+			}
+		}
+
+		.panel {
+			position: absolute;
+			top: 0;
+			right: 0;
+			margin: 10rem 0 0;
+			width: 30%;
+			@include flex-center();
+
+			.login {
+				.input-wrap#email,
+				.input-wrap#repeat {
+					margin: 0;
+					height: 0;
+					opacity: 0;
+				}
+			}
+
+			.switch {
+				span {
+					color: #ccc;
+					font-size: 1.4rem;
+					cursor: pointer;
+				}
+
+				span.active {
+					color: $theme-color;
+				}
+			}
+
+			form {
+				margin: 3rem 0 0;
+				width: 12rem;
+
+				.input-wrap {
+					position: relative;
+					margin: 2rem 0;
+					width: 100%;
+					opacity: 1;
+					height: 2rem;
+					transition: 0.5s;
+
+					input {
+						width: 100%;
+						border: none;
+						outline: none;
+						border-bottom: 0.1rem solid $theme-color;
+					}
+
+					&::after {
+						content: attr(placeholder);
+						position: absolute;
+						top: -20%;
+						left: 0;
+						font-size: 1.3rem;
+						color: darken($color: $theme-color, $amount: 10%);
+						pointer-events: none;
+						transition: 0.5s;
+					}
+
+					&.focus::after {
+						top: -70%;
+						font-size: 1rem;
+					}
+				}
+
+				.forget {
+					span {
+						display: block;
+						color: $theme-color;
+						font-size: 0.8rem;
+					}
+				}
+
+				button {
+					margin: 2rem 0 0;
+					width: 100%;
+					height: 3.5rem;
+					border: none;
+					outline: none;
+					border-radius: 3rem;
+					background: linear-gradient(
+						90deg,
+						rgb(181, 154, 254),
+						rgb(254, 189, 253)
+					);
+					color: #fff;
+					text-transform: uppercase;
+					box-shadow: 0 0 8px $theme-color;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}

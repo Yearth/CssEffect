@@ -1,0 +1,102 @@
+@charset "UTF-8";
+/**
+ * 配色方案：
+ * 背景：rgb(224, 207, 254), rbg(255, 239, 255)
+ * 按钮：rgb(181, 154, 254), rgb(254, 189, 253)
+ */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(45deg, #b59afe, #febdfd);
+}
+#page .container {
+  width: 70rem;
+  position: relative;
+}
+#page .container .img-box img {
+  width: 70rem;
+}
+#page .container .panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10rem 0 0;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#page .container .panel .login .input-wrap#email,
+#page .container .panel .login .input-wrap#repeat {
+  margin: 0;
+  height: 0;
+  opacity: 0;
+}
+#page .container .panel .switch span {
+  color: #ccc;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+#page .container .panel .switch span.active {
+  color: #b59afe;
+}
+#page .container .panel form {
+  margin: 3rem 0 0;
+  width: 12rem;
+}
+#page .container .panel form .input-wrap {
+  position: relative;
+  margin: 2rem 0;
+  width: 100%;
+  opacity: 1;
+  height: 2rem;
+  transition: 0.5s;
+}
+#page .container .panel form .input-wrap input {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-bottom: 0.1rem solid #b59afe;
+}
+#page .container .panel form .input-wrap::after {
+  content: attr(placeholder);
+  position: absolute;
+  top: -20%;
+  left: 0;
+  font-size: 1.3rem;
+  color: #9068fe;
+  pointer-events: none;
+  transition: 0.5s;
+}
+#page .container .panel form .input-wrap.focus::after {
+  top: -70%;
+  font-size: 1rem;
+}
+#page .container .panel form .forget span {
+  display: block;
+  color: #b59afe;
+  font-size: 0.8rem;
+}
+#page .container .panel form button {
+  margin: 2rem 0 0;
+  width: 100%;
+  height: 3.5rem;
+  border: none;
+  outline: none;
+  border-radius: 3rem;
+  background: linear-gradient(90deg, #b59afe, #febdfd);
+  color: #fff;
+  text-transform: uppercase;
+  box-shadow: 0 0 8px #b59afe;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=style.css.map */

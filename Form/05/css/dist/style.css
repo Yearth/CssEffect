@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+p,
+a,
+input {
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.signup-btn,
+.login-btn {
+  padding: 8px 40px;
+  display: inline-block;
+  background: #fff;
+  font-weight: bold;
+  border-radius: 50px;
+}
+
+.signup-btn {
+  margin-left: 15px;
+  text-decoration: none;
+  color: #444;
+}
+
+.signup-link,
+.login-link {
+  float: right;
+}
+
+.clear {
+  clear: both;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: url(../../static/img/bg.jpg);
+  background-size: cover;
+  color: #fff;
+}
+body .login-form {
+  width: 320px;
+  height: 400px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0 auto;
+}
+body .login-form .logo,
+body .login-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+body .login-form .logo i {
+  font-size: 50px;
+}
+body .login-form h2 {
+  text-transform: uppercase;
+}
+body .login-form .form-item {
+  margin-bottom: 20px;
+  border-bottom: 2px solid #bbb;
+}
+body .login-form .form-item input,
+body .login-form .form-item label {
+  box-sizing: border-box;
+  padding: 10px;
+  height: 32px;
+  float: left;
+}
+body .login-form .form-item label {
+  width: 32px;
+}
+body .login-form .form-item input {
+  width: calc(100% - 32px);
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+}
+body .login-form .btn-group .login-btn {
+  float: left;
+  text-decoration: none;
+  color: #444;
+}
+body .login-form .btn-group .forget-link {
+  padding: 8px;
+  float: right;
+  color: #fff;
+}
+
+/*# sourceMappingURL=style.css.map */

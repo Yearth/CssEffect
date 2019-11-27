@@ -1,0 +1,88 @@
+@import 'var.less';
+@import 'mixins.less';
+
+* {
+	.init;
+}
+
+#page {
+	min-height: 100vh;
+	min-width: 100vw;
+	background: @theme-color;
+	.flex-center;
+
+	.login-form {
+		box-sizing: border-box;
+		padding: @common-padding;
+		width: @form-width;
+		background: @form-bg;
+
+		header {
+			padding: @common-padding;
+			text-align: center;
+
+			h1 {
+				font-size: @title-font-size;
+				text-transform: uppercase;
+			}
+		}
+
+		article {
+			padding: @common-padding;
+
+			.input-field {
+				position: relative;
+				margin-bottom: 20px;
+
+				input {
+					box-sizing: border-box;
+					padding: @common-padding;
+					width: 100%;
+					height: @input-height;
+					outline: none;
+					font-size: @input-font-size;
+					border: 1px solid #000;
+
+					&:focus ~ span,
+					&:valid ~ span {
+						.active-span-placeholder;
+					}
+				}
+
+				span {
+					.span-placeholder;
+				}
+			}
+
+			.btn-field {
+				input {
+					box-sizing: border-box;
+					width: 100%;
+					height: @input-height;
+					outline: none;
+					font-size: @input-font-size;
+					font-weight: @bold;
+					background: @theme-color;
+					text-transform: uppercase;
+					cursor: pointer;
+
+					&:hover {
+						background: @active-theme-color;
+					}
+				}
+			}
+		}
+
+		footer {
+			padding: @common-padding;
+			text-align: center;
+			color: @content-color;
+
+			a {
+				text-decoration: none;
+				color: @hyperlinks-color;
+				font-weight: @bold;
+			}
+		}
+	}
+}

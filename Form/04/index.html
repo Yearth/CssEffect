@@ -1,0 +1,87 @@
+<!--
+ * @Author: Yearth
+ * @Github: https://github.com/Yearth
+ * @Date: 2019-11-06 16:59:24
+ * @LastEditTime: 2019-11-27 15:26:28
+ * @LastEditors: Please set LastEditors
+ * @Description: 表单 04
+ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./css/dist/style.css" />
+    <title>表单 04</title>
+  </head>
+  <body>
+    <main id="page">
+      <div class="container">
+        <div class="img-box">
+          <img src="./static/img/bg.jpg" alt="" />
+        </div>
+        <div class="panel">
+          <div class="content login">
+            <div class="switch">
+              <span id="login" class="active">Login</span>
+              <span>/</span>
+              <span id="sign-up">Sign Up</span>
+            </div>
+            <form action="">
+              <div id="email" class="input-wrap" placeholder="Email">
+                <input type="text" />
+              </div>
+              <div class="input-wrap" placeholder="Username">
+                <input type="text" />
+              </div>
+              <div class="input-wrap" placeholder="Password">
+                <input type="password" />
+              </div>
+              <div id="repeat" class="input-wrap" placeholder="Repeat">
+                <input type="password" />
+              </div>
+              <div class="forget"><span>Forget?</span></div>
+              <button>Login</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script>
+      $("#login").click(function() {
+        const $me = $(this);
+
+        $(".switch span").removeClass("active");
+        $me.addClass("active");
+
+        $me.parents(".content").removeClass("sign-up");
+        $me.parents(".content").addClass("login");
+      });
+
+      $("#sign-up").click(function() {
+        const $me = $(this);
+
+        $(".switch span").removeClass("active");
+        $me.addClass("active");
+
+        $me.parents(".content").removeClass("login");
+        $me.parents(".content").addClass("sign-up");
+      });
+
+      $(".input-wrap input").on("focus", function() {
+        const $me = $(this);
+        $me.parent().addClass("focus");
+      });
+
+      $(".input-wrap input").on("blur", function() {
+        const $me = $(this);
+
+        if ($me.val() !== "") return;
+        $me.parent().removeClass("focus");
+      });
+    </script>
+  </body>
+</html>
