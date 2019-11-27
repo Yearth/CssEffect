@@ -1,0 +1,57 @@
+@import 'var.less';
+@import 'mixins.less';
+
+* {
+	.init;
+}
+
+#page {
+	min-width: 100vw;
+	min-height: 100vh;
+	background: #262626;
+	.flex-center;
+
+	.slider-container {
+		position: relative;
+
+		#range-value {
+			position: absolute;
+			top: 0;
+			right: -60px;
+			box-sizing: border-box;
+			padding: 2px;
+			width: 50px;
+			background: #fff;
+			text-align: center;
+			transform: translateY(2px);
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: 25%;
+				left: -5px;
+				width: 10px;
+				height: 10px;
+				transform: rotate(45deg);
+				background: #fff;
+			}
+		}
+
+		#range-input {
+			width: 400px;
+			height: 2px;
+			background: #111;
+			-webkit-appearance: none;
+			outline: none;
+			border-radius: 2px;
+
+			&::-webkit-slider-thumb {
+				-webkit-appearance: none;
+				width: 20px;
+				height: 20px;
+				border-radius: 50%;
+				background: #00bcd4;
+			}
+		}
+	}
+}

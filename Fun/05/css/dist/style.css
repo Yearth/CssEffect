@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#page {
+  min-width: 100vw;
+  min-height: 100vh;
+  background: #262626;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#page h2 {
+  font-family: sans-serif;
+  font-size: 16em;
+  color: #fff;
+  animation: tiktok 0.5s linear infinite;
+}
+
+@keyframes tiktok {
+  0%, 100% {
+    text-shadow: -6px -6px 0 #0ff, 6px 6px 0 #f00;
+  }
+  25% {
+    text-shadow: 6px 6px 0 #0ff, -6px -6px 0 #f00;
+  }
+  50% {
+    text-shadow: 6px -6px 0 #0ff, -6px 6px 0 #f00;
+  }
+  75% {
+    text-shadow: -6px 6px 0 #0ff, 6px -6px 0 #f00;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

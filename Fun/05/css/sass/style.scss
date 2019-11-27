@@ -1,0 +1,46 @@
+$page-bg-color: #262626;
+
+@mixin init {
+	margin: 0;
+	padding: 0;
+}
+
+@mixin flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+* {
+	@include init;
+}
+
+#page {
+	min-width: 100vw;
+	min-height: 100vh;
+	background: $page-bg-color;
+	@include flex-center;
+
+	h2 {
+		font-family: sans-serif;
+		font-size: 16em;
+		color: #fff;
+		animation: tiktok 0.5s linear infinite;
+	}
+}
+
+@keyframes tiktok {
+	0%,
+	100% {
+		text-shadow: -6px -6px 0 #0ff, 6px 6px 0 #f00;
+	}
+	25% {
+		text-shadow: 6px 6px 0 #0ff, -6px -6px 0 #f00;
+	}
+	50% {
+		text-shadow: 6px -6px 0 #0ff, -6px 6px 0 #f00;
+	}
+	75% {
+		text-shadow: -6px 6px 0 #0ff, 6px -6px 0 #f00;
+	}
+}
