@@ -1,0 +1,129 @@
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Poppins Regular'), local('Poppins-Regular'), url(https://fonts.gstatic.com/s/poppins/v8/pxiEyp8kv8JHgFVrJJfedw.ttf) format('truetype');
+}
+.init {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cover-film {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  z-index: 999;
+  pointer-events: none;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+#page {
+  min-width: 100vw;
+  min-height: 100vh;
+  background: #262626;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#page .card {
+  width: 300px;
+  height: 400px;
+  background: linear-gradient(to right, #8360c3, #2ebf91);
+  position: relative;
+}
+#page .card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  z-index: 999;
+  pointer-events: none;
+}
+#page .card .switch {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  z-index: 2;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+#page .card .switch:hover {
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+}
+#page .card .switch::before {
+  content: 'More';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  font-size: 12px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#page .card .switch:hover:before {
+  display: none;
+}
+#page .card .switch:hover ~ .super-face {
+  opacity: 1;
+  visibility: visible;
+}
+#page .card .super-face {
+  box-sizing: border-box;
+  padding: 20px;
+  z-index: 1;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+  color: #fff;
+}
+#page .card .super-face header {
+  width: 100%;
+  height: 100px;
+}
+#page .card .super-face article {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#page .card .super-face footer {
+  width: 100%;
+  height: 100px;
+  text-align: right;
+}
