@@ -1,0 +1,22 @@
+{
+  "name": "dynamic",
+  "version": "1.0.0",
+  "description": "这里是一些日常积累的有趣动效，尽量只使用 css 和 html。",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yearth/FrontEndDynamic.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yearth/FrontEndDynamic/issues"
+  },
+  "homepage": "https://github.com/Yearth/FrontEndDynamic#readme",
+  "dependencies": {
+    "jquery": "^3.4.1"
+  }
+}
