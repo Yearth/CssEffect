@@ -1,0 +1,60 @@
+<!--
+ * @Author: Yearth
+ * @Github: https://github.com/Yearth
+ * @Date: 2019-11-24 19:27:36
+ * @Description: Card Effect 07
+ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="../../node_modules/font-awesome/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./css/dist/style.css" />
+    <title>Card Effect 07</title>
+  </head>
+  <body>
+    <section class="card-box">
+      <!-- header -->
+      <header>
+        <span class="icon-box">
+          <i class="fa fa-rocket"></i>
+        </span>
+        <h3>CREATIVE</h3>
+      </header>
+
+      <!-- body -->
+      <div class="content">
+        <ul class="hidden">
+          <li>Lorem ipsum, dolor sit amet</li>
+          <li>Lorem ipsum, dolor sit amet</li>
+          <li>Lorem ipsum, dolor sit amet</li>
+          <li>Lorem ipsum, dolor sit amet</li>
+        </ul>
+      </div>
+
+      <!-- footer -->
+      <footer>
+        <a href="#" class="expand">
+          <div class="btn-wrap">
+            <span class="plus">+</span>
+            <span class="minus">-</span>
+          </div>
+        </a>
+      </footer>
+    </section>
+
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script>
+      $(() => {
+        $(".card-box").click(function() {
+          $(this).toggleClass("selected");
+        });
+      });
+    </script>
+  </body>
+</html>
