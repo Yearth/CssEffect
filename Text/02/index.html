@@ -1,0 +1,38 @@
+<!--
+ * @Author: Yearth
+ * @Github: https://github.com/Yearth
+ * @Date: 2019-11-29 10:12:42
+ * @Description: Text Effect 02
+ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./css/dist/style.css" />
+    <title>Text Effect 02</title>
+  </head>
+  <body>
+    <section>
+      <header>
+        Scroll to see magic!
+      </header>
+      <span class="curve">
+        <img src="./img/curve.png" />
+      </span>
+      <footer>
+        surprise!
+      </footer>
+    </section>
+
+    <script>
+      const scroll = document.querySelector(".curve");
+      console.log(scroll);
+      window.addEventListener("scroll", () => {
+        let value = 1 + window.scrollY / -500;
+        scroll.style.transform = `scaleY(${value})`;
+      });
+    </script>
+  </body>
+</html>

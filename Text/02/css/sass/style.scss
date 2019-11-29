@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 200vh;
+  background: #111;
+}
+
+section {
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 200px);
+  background: #2abbff;
+
+  header {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 90px;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  .curve {
+    position: absolute;
+    bottom: -200px;
+    width: 100%;
+    height: 200px;
+    transform-origin: top;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  footer {
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 90px;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+}
