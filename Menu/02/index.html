@@ -1,35 +1,36 @@
 <!--
- * @Description: Menu 2
- * @Author: yearth
- * @Date: 2019-09-20 17:10:22
- * @LastEditTime: 2019-10-14 11:42:28
+ * @Author: Yearth
+ * @Github: https://github.com/Yearth
+ * @Date: 2019-11-24 19:27:36
+ * @Description: Menu Effect 02
  -->
+
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<link rel="stylesheet" href="./css/dist/style.css" />
-		<title>Menu 2</title>
-	</head>
-	<body>
-		<main id="page">
-			<div class="hamburger">
-				<span></span>
-				<span></span>
-				<span></span>
-			</div>
-		</main>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./css/dist/style.css" />
+    <title>Menu Effect 02</title>
+  </head>
+  <body>
+    <main id="page">
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </main>
 
-		<script src="../../node_modules/jquery/dist/jquery.js"></script>
-		<script>
-			$(document).ready(_ => {
-				let $hamburger = $('.hamburger')
-				$hamburger.click(_ => {
-					$hamburger.toggleClass('active')
-				})
-			})
-		</script>
-	</body>
+    <script src="../../node_modules/jquery/dist/jquery.js"></script>
+    <script>
+      $(document).ready(_ => {
+        let $hamburger = $(".hamburger");
+        $hamburger.click(_ => {
+          $hamburger.toggleClass("active");
+        });
+      });
+    </script>
+  </body>
 </html>
