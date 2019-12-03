@@ -27,3 +27,7 @@
 ## 07
 
 ![Card-Effect-07](https://s2.ax1x.com/2019/11/27/Q90wZV.gif)
+
+## 08
+
+![Card-Effect-08](https://s2.ax1x.com/2019/12/03/QKsQjH.gif)
