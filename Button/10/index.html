@@ -1,0 +1,47 @@
+<!--
+ * @Author: Yearth
+ * @Github: https://github.com/Yearth
+ * @Date: 2019-11-25 10:45:56
+ * @Description: Button Effect 10
+ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./css/dist/style.css" />
+
+    <title>Button Effect 10</title>
+  </head>
+  <body>
+    <aside class="conut-container">
+      <span class="next" onClick="nextNum()"></span>
+      <span class="prev" onClick="prevNum()"></span>
+      <div id="count-box">
+        <!-- <span>0</span> -->
+      </div>
+    </aside>
+
+    <script>
+      const countBox = document.getElementById("count-box");
+      for (let i = 0; i < 100; i++) {
+        const spanEl = document.createElement("span");
+        spanEl.textContent = i;
+        countBox.appendChild(spanEl);
+      }
+      let conutEls = countBox.getElementsByTagName("span");
+      let index = 0;
+      const nextNum = () => {
+        conutEls[index].style.display = "none";
+        index = (index + 1) % conutEls.length;
+        conutEls[index].style.display = "initial";
+      };
+      const prevNum = () => {
+        conutEls[index].style.display = "none";
+        index = (index - 1 + conutEls.length) % conutEls.length;
+        conutEls[index].style.display = "initial";
+      };
+    </script>
+  </body>
+</html>
