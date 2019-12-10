@@ -35,3 +35,7 @@
 ## 09
 
 ![Card-Effect-09](https://s2.ax1x.com/2019/12/09/QdLSns.gif)
+
+## 10
+
+![Card-Effect-10](https://s2.ax1x.com/2019/12/10/QBVYAx.gif)

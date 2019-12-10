@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  background: #010615;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  position: relative;
+  margin: 40px;
+  width: 300px;
+  height: 400px;
+  background: #060c21;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card .glass {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: #ffffff10;
+  pointer-events: none;
+}
+.card .content {
+  padding: 20px;
+  color: white;
+}
+.card::before, .card::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  bottom: -2px;
+  right: -2px;
+  background: white;
+  z-index: -1;
+}
+.card::after {
+  filter: blur(40px);
+}
+.card:nth-child(1)::before, .card:nth-child(1)::after {
+  background: linear-gradient(235deg, #89ff00, #010615, #00bcd4);
+}
+.card:nth-child(2)::before, .card:nth-child(2)::after {
+  background: linear-gradient(235deg, #ff005e, #010615, #fbff00);
+}
+.card:nth-child(3)::before, .card:nth-child(3)::after {
+  background: linear-gradient(235deg, #772aff, #010615, #2196f3);
+}
+
+/*# sourceMappingURL=style.css.map */
