@@ -1,0 +1,69 @@
+@import "https://fonts.googleapis.com/css?family=Open+Sans|Poppins&display=swap";
+
+$textColor:#fff;
+$backgroundColor:#111;
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: $backgroundColor;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    border: 2px solid $textColor;
+    color: $textColor;
+    font-weight: 600;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 6px;
+      left: -2px;
+      width: calc(100% + 4px);
+      height: calc(100% - 12px);
+      background: $backgroundColor;
+      transform: scaleY(1);
+      transition: 0.5s ease-in-out;
+      transition-delay: 0.5s;
+    }
+
+    &:hover::before {
+      transform: scaleY(0);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 6px;
+      top: -2px;
+      height: calc(100% + 4px);
+      width: calc(100% - 12px);
+      background: $backgroundColor;
+      transform: scaleX(1);
+      transition: 0.5s ease-in-out;
+    }
+
+    &:hover::after {
+      transform: scaleX(0);
+    }
+
+    span {
+      position: relative;
+      z-index: 3;
+    }
+  }
+}

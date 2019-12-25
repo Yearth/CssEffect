@@ -1,0 +1,61 @@
+@import "https://fonts.googleapis.com/css?family=Open+Sans|Poppins&display=swap";
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body a {
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  border: 2px solid #fff;
+  color: #fff;
+  font-weight: 600;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+body a::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% - 12px);
+  background: #111;
+  transform: scaleY(1);
+  transition: 0.5s ease-in-out;
+  transition-delay: 0.5s;
+}
+body a:hover::before {
+  transform: scaleY(0);
+}
+body a::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: -2px;
+  height: calc(100% + 4px);
+  width: calc(100% - 12px);
+  background: #111;
+  transform: scaleX(1);
+  transition: 0.5s ease-in-out;
+}
+body a:hover::after {
+  transform: scaleX(0);
+}
+body a span {
+  position: relative;
+  z-index: 3;
+}
+
+/*# sourceMappingURL=style.css.map */
