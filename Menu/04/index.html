@@ -1,0 +1,63 @@
+<!--
+ * @Author: Yearth
+ * @Github: https://github.com/Yearth
+ * @Date: 2019-12-02 10:23:15
+ * @Description: Menu Effect 04
+ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./css/dist/style.css" />
+    <title>Menu Effect 04</title>
+  </head>
+  <body>
+    <ul class="pagination">
+      <li><a href="#" class="prev">< Prev</a></li>
+      <li class="pageNumber active"><a href="#">1</a></li>
+      <li class="pageNumber"><a href="#">2</a></li>
+      <li class="pageNumber"><a href="#">3</a></li>
+      <li class="pageNumber"><a href="#">4</a></li>
+      <li class="pageNumber"><a href="#">5</a></li>
+      <li class="pageNumber"><a href="#">6</a></li>
+      <li class="pageNumber"><a href="#">7</a></li>
+      <li><a href="#" class="next">Next ></a></li>
+    </ul>
+
+    <script src="../../node_modules/jquery/dist/jquery.js"></script>
+    <script>
+      const nextPage = () => {
+        $(".pagination")
+          .find(".pageNumber.active")
+          .next()
+          .addClass("active");
+        $(".pagination")
+          .find(".pageNumber.active")
+          .prev()
+          .removeClass("active");
+      };
+
+      const prevPage = () => {
+        $(".pagination")
+          .find(".pageNumber.active")
+          .prev()
+          .addClass("active");
+        $(".pagination")
+          .find(".pageNumber.active")
+          .next()
+          .removeClass("active");
+      };
+
+      $(document).ready(() => {
+        $(".next").click(() => {
+          nextPage();
+        });
+        $(".prev").click(() => {
+          prevPage();
+        });
+      });
+    </script>
+  </body>
+</html>
