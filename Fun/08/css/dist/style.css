@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: #262626;
+}
+.container span {
+  display: inline-flex;
+  width: 9.7%;
+  height: 40px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  box-shadow: 0 2px 5px rbga(0, 0, 0, 1);
+}
+.container span.fall {
+  z-index: 1000;
+  background: #f00;
+  transition: 0.2s;
+  pointer-events: none;
+  animation: fall 2s linear forwards;
+}
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  to {
+    transform: translateY(1000px) rotate(20deg);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
