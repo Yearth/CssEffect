@@ -31,3 +31,7 @@
 ## 08
 
 ![Fun-Effect-08](https://s2.ax1x.com/2019/12/27/lVveiR.gif)
+
+## 09
+
+![Fun-Effect-09](https://s2.ax1x.com/2019/12/30/lMqmzn.gif)
