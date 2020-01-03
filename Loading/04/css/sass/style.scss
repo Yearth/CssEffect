@@ -1,0 +1,101 @@
+body {
+	margin: 0;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient(45deg, #cfffd0, #3fff46)
+}
+
+.loader {
+	position: relative;
+	width: 100px;
+	height: 100px;
+	border: 10px dashed rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.5), inset 0 0 0 10px rgba(0, 0, 0, 0.4);
+	animation: loaderBox 8s linear infinite;
+
+	@keyframes loaderBox {
+		0% {
+			transform: rotate(360deg);
+		}
+
+		100% {
+			transform: rotate(0deg);
+		}
+	}
+
+	span {
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: block;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+
+		&::before {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 10px;
+			background: #fff;
+			transform: scaleX(0);
+			animation: loading 2s linear infinite;
+
+			@keyframes loading {
+				0% {
+					transform: scaleX(0);
+					transform-origin: left;
+				}
+
+				25% {
+					transform: scaleX(1);
+					transform-origin: left;
+				}
+
+				25.01% {
+					transform-origin: right;
+				}
+
+				50%,
+				100% {
+					transform: scaleX(0);
+					transform-origin: right;
+				}
+			}
+		}
+
+		&:nth-child(1) {
+			transform: rotate(0deg);
+
+			&::before {
+				animation-delay: 0s;
+			}
+		}
+
+		&:nth-child(2) {
+			transform: rotate(90deg);
+
+			&::before {
+				animation-delay: 0.5s;
+			}
+		}
+
+		&:nth-child(3) {
+			transform: rotate(180deg);
+
+			&::before {
+				animation-delay: 1s;
+			}
+		}
+
+		&:nth-child(4) {
+			transform: rotate(270deg);
+
+			&::before {
+				animation-delay: 1.5s;
+			}
+		}
+	}
+}

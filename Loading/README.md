@@ -11,3 +11,7 @@
 ## 03
 
 ![Loading-Effect-03](https://s2.ax1x.com/2019/11/27/Q9W3gf.gif)
+
+## 04
+
+![Loading-Effect-04](https://s2.ax1x.com/2020/01/03/lakgF1.gif)
