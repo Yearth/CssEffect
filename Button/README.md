@@ -51,3 +51,7 @@
 ## 13
 
 ![Button-Effect-13](https://s2.ax1x.com/2020/01/14/lqSjMR.gif)
+
+## 14
+
+![Button-Effect-14](https://s2.ax1x.com/2020/01/14/lqV5p6.gif)
