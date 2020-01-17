@@ -15,3 +15,7 @@
 ## 04
 
 ![Loading-Effect-04](https://s2.ax1x.com/2020/01/03/lakgF1.gif)
+
+## 05
+
+![Loading-Effect-05](https://s2.ax1x.com/2020/01/17/lxj7wR.gif)
