@@ -1,0 +1,46 @@
+<!--
+ * @Author: Yearth
+ * @Github: https://github.com/Yearth
+ * @Date: 2019-11-30 15:21:32
+ * @Description: Just For Fun 10
+ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./css/dist/style.css" />
+
+    <title>Just For Fun 10</title>
+  </head>
+  <body>
+    <section>
+      <video id="slider" autoplay muted loop>
+        <source src="./static/v1.mp4" type="video/mp4" />
+      </video>
+      <ul class="nav">
+        <li onclick="handleOnClick('./static/v1.mp4')">
+          <img src="./static/img1.png" alt="" />
+        </li>
+        <li onclick="handleOnClick('./static/v2.mp4')">
+          <img src="./static/img2.png" alt="" />
+        </li>
+        <li onclick="handleOnClick('./static/v3.mp4')">
+          <img src="./static/img3.png" alt="" />
+        </li>
+        <li onclick="handleOnClick('./static/v4.mp4')">
+          <img src="./static/img4.png" alt="" />
+        </li>
+      </ul>
+    </section>
+
+    <script>
+      const handleOnClick = video => {
+        console.log(video);
+
+        document.getElementById("slider").src = video;
+      };
+    </script>
+  </body>
+</html>
