@@ -1,0 +1,37 @@
+<!--
+ * @Author: Yearth
+ * @Github: https://github.com/Yearth
+ * @Date: 2019-11-30 15:21:32
+ * @Description: Just For Fun 11
+ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./css/dist/style.css" />
+
+    <title>Just For Fun 11</title>
+  </head>
+  <body>
+    <script>
+      document.addEventListener("mousemove", e => {
+        const body = document.querySelector("body");
+        const heart = document.createElement("span");
+        let x = e.offsetX;
+        let y = e.offsetY;
+        let size = Math.random() * 100 + 20;
+        heart.style.left = `${x}px`;
+        heart.style.top = `${y}px`;
+        heart.style.height = `${size}px`;
+        heart.style.width = `${size}px`;
+        body.appendChild(heart);
+
+        setTimeout(() => {
+          heart.remove();
+        }, 2000);
+      });
+    </script>
+  </body>
+</html>
