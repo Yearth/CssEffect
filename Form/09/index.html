@@ -1,0 +1,59 @@
+<!--
+ * @Date: 2020-02-21 14:31:12
+ * @LastEditors: Yearth
+ * @LastEditTime: 2020-02-23 20:56:28
+ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./css/dist/style.css" />
+    <title>Form Effect 09</title>
+  </head>
+  <body>
+    <div class="container">
+      <h3>Email Validation Check</h3>
+      <form action="#" class="valid-form">
+        <section class="valid-item">
+          <input
+            type="text"
+            name=""
+            class="valid-inp"
+            placeholder="Enter Email Address"
+            onkeydown="validation()"
+          />
+          <span class="valid-info"></span>
+        </section>
+      </form>
+    </div>
+
+    <script>
+      const validation = () => {
+        const form = document.getElementsByClassName("valid-form")[0];
+        const email = document.getElementsByClassName("valid-inp")[0].value;
+        const info = document.getElementsByClassName("valid-info")[0];
+        const pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+        if (email.match(pattern)) {
+          form.classList.add("valid");
+          form.classList.remove("invalid");
+          info.innerHTML = "Your Email Address in Valid.";
+          info.style.color = "#00ff00";
+        } else {
+          form.classList.add("invalid");
+          form.classList.remove("valid");
+          info.innerHTML = "Please Enter Valid Email Address.";
+          info.style.color = "#ff0000";
+        }
+
+        if (email === "") {
+          form.classList.remove("valid");
+          form.classList.remove("invalid");
+          info.innerHTML = "";
+        }
+      };
+    </script>
+  </body>
+</html>
