@@ -1,0 +1,118 @@
+<!--
+ * @Date: 2020-02-22 14:58:04
+ * @LastEditors: Yearth
+ * @LastEditTime: 2020-02-22 15:30:27
+ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link rel="stylesheet" href="./css/dist/style.css" />
+    <title>Web Design 01</title>
+  </head>
+  <body>
+    <div class="service-container">
+      <div class="inner-wrap">
+        <h1>Our <strong>Services</strong></h1>
+        <div class="service-list owl-carousel">
+          <!-- Design -->
+          <section class="service-item">
+            <div class="service-icon">
+              <i class="fas fa-paint-brush"></i>
+            </div>
+            <h3 class="service-name">Design</h3>
+            <p class="service-desc">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis
+              explicabo officiis ea, unde, qui fugiat blanditiis, ex quos vitae
+              inventore quidem culpa quasi. Incidunt repellendus pariatur
+              voluptatum vero, aut laboriosam.
+            </p>
+          </section>
+          <!-- Edit -->
+          <section class="service-item">
+            <div class="service-icon">
+              <i class="fas fa-pencil-alt"></i>
+            </div>
+            <h3 class="service-name">Edit Text</h3>
+            <p class="service-desc">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis
+              explicabo officiis ea, unde, qui fugiat blanditiis, ex quos vitae
+              inventore quidem culpa quasi. Incidunt repellendus pariatur
+              voluptatum vero, aut laboriosam.
+            </p>
+          </section>
+          <!-- Build -->
+          <section class="service-item">
+            <div class="service-icon">
+              <i class="fas fa-code "></i>
+            </div>
+            <h3 class="service-name">Build Website</h3>
+            <p class="service-desc">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis
+              explicabo officiis ea, unde, qui fugiat blanditiis, ex quos vitae
+              inventore quidem culpa quasi. Incidunt repellendus pariatur
+              voluptatum vero, aut laboriosam.
+            </p>
+          </section>
+          <!-- Database -->
+          <section class="service-item">
+            <div class="service-icon">
+              <i class="fas fa-database"></i>
+            </div>
+            <h3 class="service-name">Manager Database</h3>
+            <p class="service-desc">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis
+              explicabo officiis ea, unde, qui fugiat blanditiis, ex quos vitae
+              inventore quidem culpa quasi. Incidunt repellendus pariatur
+              voluptatum vero, aut laboriosam.
+            </p>
+          </section>
+          <!-- Build -->
+          <section class="service-item">
+            <div class="service-icon">
+              <i class="fas fa-headset"></i>
+            </div>
+            <h3 class="service-name">Support</h3>
+            <p class="service-desc">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis
+              explicabo officiis ea, unde, qui fugiat blanditiis, ex quos vitae
+              inventore quidem culpa quasi. Incidunt repellendus pariatur
+              voluptatum vero, aut laboriosam.
+            </p>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $(".service-list").owlCarousel({
+        margin: 20,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 2000,
+        autoplayHoverPause: true,
+        responsive: {
+          0: {
+            items: 1
+          },
+          600: {
+            items: 2
+          },
+          1000: {
+            items: 3
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

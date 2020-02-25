@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: #191919;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  position: relative;
+  width: 2.4rem;
+  height: .8rem;
+  cursor: pointer;
+
+  input {
+    opacity: 0;
+
+    &:checked~.btn-box::before {
+      opacity: 0;
+    }
+
+    &:checked~.btn-box::after {
+      opacity: 1;
+    }
+
+    &:checked~.btn-item {
+      left: 50%;
+    }
+  }
+
+  .btn-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #101010;
+    border-radius: .4rem;
+    box-shadow: 0 0 0 .08rem #101010;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: calc(50% - .04rem);
+      left: -0.5rem;
+      width: .08rem;
+      height: .08rem;
+      border-radius: 50%;
+      background: #f00;
+      box-shadow: 0 0 .05rem #f00,
+        0 0 .1rem #f00,
+        0 0 .2rem #f00,
+        0 0 .4rem #f00,
+        0 0 .8rem #f00;
+      transition: .5s;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: calc(50% - .04rem);
+      right: -0.5rem;
+      width: .08rem;
+      height: .08rem;
+      border-radius: 50%;
+      background: #0f0;
+      box-shadow: 0 0 .05rem #0f0,
+        0 0 .1rem #0f0,
+        0 0 .2rem #0f0,
+        0 0 .4rem #0f0,
+        0 0 .8rem #0f0;
+      transition: .5s;
+      opacity: 0;
+    }
+  }
+
+  .btn-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1.2rem;
+    height: .8rem;
+    border-radius: .4rem;
+    background: #333;
+    box-shadow: inset 0 -0.2rem .15rem #292929,
+      inset 0 0.2rem .15rem #292929;
+    transition: .3s;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: .52rem;
+      height: .8rem;
+      background: #252525;
+      border-top-left-radius: .8rem;
+      border-bottom-left-radius: .8rem;
+      box-shadow: inset -0.05rem -0.05rem .15rem rgba(0, 0, 0, 0.3);
+      filter: blur(.02rem);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: .52rem;
+      height: .8rem;
+      background: #252525;
+      border-top-right-radius: .8rem;
+      border-bottom-right-radius: .8rem;
+      box-shadow: inset -0.05rem -0.05rem .15rem rgba(0, 0, 0, 0.3);
+      filter: blur(.02rem);
+    }
+  }
+}

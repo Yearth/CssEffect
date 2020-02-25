@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: #18191f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-group {
+  position: relative;
+  display: flex;
+}
+.btn-group .btn-item {
+  position: relative;
+  list-style: none;
+}
+.btn-group .btn-item a {
+  display: block;
+  width: 3.125rem;
+  height: 3.125rem;
+  background: #18191f;
+  line-height: 3.4375rem;
+  text-align: center;
+  margin: 0 0.625rem;
+  border-radius: 0.9375rem;
+  box-shadow: -0.125rem -0.125rem 0.1875rem rgba(255, 255, 255, 0.05), 0.1875rem 0.1875rem 0.1875rem rgba(0, 0, 0, 0.2);
+}
+.btn-group .btn-item a:hover .fa {
+  color: #00f3ff;
+  text-shadow: 0 0 0.9375rem #00f3ff;
+}
+.btn-group .btn-item .fa {
+  font-size: 1.375rem;
+  color: #555;
+}
+
+/*# sourceMappingURL=style.css.map */
