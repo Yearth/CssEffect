@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #333;
+}
+
+.glide__slide {
+  filter: blur(6px);
+  opacity: 0.7;
+  transition: 0.3s linear;
+}
+.glide__slide img {
+  width: 100%;
+}
+
+.glide__slide--active {
+  opacity: 1;
+  filter: none;
+  transform: scale(1.1);
+}
+
+.glide__slides {
+  overflow: visible;
+}
+
+/*# sourceMappingURL=style.css.map */

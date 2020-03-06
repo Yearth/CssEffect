@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- import font-awesome -->
+    <link
+      href="https://cdn.bootcss.com/font-awesome/5.12.1/css/all.css"
+      rel="stylesheet"
+    />
+    <!-- import glide-js  -->
+    <link
+      rel="stylesheet"
+      href="../../node_modules/@glidejs/glide/dist/css/glide.core.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../node_modules/@glidejs/glide/dist/css/glide.theme.min.css"
+    />
+    <link rel="stylesheet" href="./css/dist/style.css" />
+
+    <title>Web Design 03</title>
+  </head>
+  <body>
+    <div class="images glide">
+      <!-- glide track -->
+      <div class="glide__track" data-glide-el="track">
+        <ul class="glide__slides">
+          <li class="glide__slide"><img src="./images/1.png" /></li>
+          <li class="glide__slide"><img src="./images/2.png" /></li>
+          <li class="glide__slide"><img src="./images/3.png" /></li>
+          <li class="glide__slide"><img src="./images/4.png" /></li>
+          <li class="glide__slide"><img src="./images/5.png" /></li>
+          <li class="glide__slide"><img src="./images/6.png" /></li>
+        </ul>
+      </div>
+
+      <!-- glide arrows -->
+      <div class="glide__arrows" data-glide-el="controls">
+        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+          <i class="fas fa-arrow-left"></i>
+        </button>
+        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+
+    <script src="../../node_modules/@glidejs/glide/dist/glide.min.js"></script>
+    <script>
+      new Glide(".images", {
+        type: "carousel",
+        perView: 5,
+        focusAt: "center",
+        gap: 40,
+        breakpoints: {
+          1200: {
+            perView: 3
+          },
+          800: {
+            perView: 2
+          }
+        }
+      }).mount();
+    </script>
+  </body>
+</html>
