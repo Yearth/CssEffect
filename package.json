@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Yearth/FrontEndDynamic#readme",
   "dependencies": {
+    "@glidejs/glide": "^3.4.1",
     "jquery": "^3.4.1"
   }
 }
