@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #040d15;
+}
+
+.btn {
+  border: none;
+  position: relative;
+  padding: 0.75rem 2.25rem;
+  margin: 0.625rem 0;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  letter-spacing: 0.125rem;
+  border-radius: 2.5rem;
+  background: linear-gradient(90deg, #0162c8, #55e7fc);
+  overflow: hidden;
+}
+
+span {
+  position: absolute;
+  background: #fff;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  border-radius: 50%;
+  animation: ripples 1s linear infinite;
+}
+@keyframes ripples {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0.5;
+  }
+  100% {
+    width: 31.25rem;
+    height: 31.25rem;
+    opacity: 0;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

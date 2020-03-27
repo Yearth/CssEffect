@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./css/dist/style.css" />
+    <title>Button Effect 17</title>
+  </head>
+
+  <body>
+    <button href="#" class="btn">Button</button>
+
+    <script>
+      const btnEls = document.querySelectorAll(".btn");
+
+      btnEls.forEach(btn => {
+        btn.addEventListener("click", function (e) {
+          const x = e.clientX - e.target.offsetLeft;
+          const y = e.clientY - e.target.offsetTop;
+
+          const ripples = document.createElement("span");
+          ripples.style.left = `${x}px`;
+          ripples.style.top = `${y}px`;
+          this.appendChild(ripples);
+
+          setTimeout(() =>{
+            ripples.remove()
+          }, 1000)
+        })
+      })      
+    </script>
+  </body>
+</html>
